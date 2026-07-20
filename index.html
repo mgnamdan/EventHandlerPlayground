@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Handler Arcade</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section id="lobby" class="lobby">
+      <div class="title-row">
+        <div>
+          <p class="kicker">JavaScript Event Handler Playground</p>
+          <h1>Event Handler Arcade</h1>
+        </div>
+        <p class="lobby-copy">
+          Eight tiny games. Each one is secretly a different JavaScript event lesson wearing a loud jacket.
+        </p>
+      </div>
+
+      <div id="gameGrid" class="game-grid" aria-label="Choose a minigame"></div>
+    </section>
+
+    <section id="arena" class="arena" hidden>
+      <div class="arena-topbar">
+        <button id="backButton" class="icon-button" type="button" aria-label="Return to game menu">Back</button>
+        <div>
+          <p id="gameLesson" class="kicker"></p>
+          <h2 id="gameTitle"></h2>
+        </div>
+        <button id="restartButton" class="icon-button" type="button">Restart</button>
+      </div>
+
+      <div class="status-strip">
+        <p id="gamePrompt">Pick a game.</p>
+        <p id="gameScore">Ready</p>
+      </div>
+
+      <div id="gameStage" class="game-stage" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
