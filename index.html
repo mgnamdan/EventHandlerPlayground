@@ -1,46 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Event Handler Arcade</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main class="app-shell">
-    <section id="lobby" class="lobby">
-      <div class="title-row">
-        <div>
-          <p class="kicker">JavaScript Event Handler Playground</p>
-          <h1>Event Handler Arcade</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Help Kip Rummage pull off the Great Biscuit Caper. Six playful heists that teach JavaScript events.">
+    <title>Kip’s Midnight Mischief — The Great Biscuit Caper</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="masthead">
+      <a href="index.html" class="brand">KR<span>KIP RUMMAGE<br>MIDNIGHT MISCHIEF</span>
+      </a>
+      <span class="stamp">WANTED: ONE PARTNER IN MISCHIEF</span>
+    </header>
+    <main>
+      <section id="lobby">
+        <div class="hero">
+          <div>
+            <p class="eyebrow">MAPLE STREET · AFTER DARK · SIX LITTLE HEISTS</p>
+            <h1>Good raccoon.<br>
+              <em>Bad influence.</em>
+            </h1>
+            <p class="intro">Meet <strong>Kip Rummage</strong>, Pip’s less employable twin. Mayor Magpie has locked up the neighbourhood’s bake-sale biscuits. Help Kip liberate the lot for a midnight picnic.</p>
+            <button id="shuffle" class="primary">Deal me a heist ↗</button>
+          </div>
+          <div class="hero-art">
+            <span class="moon" aria-hidden="true"></span>
+            <span class="orbit">SMALL CRIMES. EXCELLENT MANNERS.</span>
+            <img class="kip-portrait" src="kip.svg" alt="Kip, Pip’s raccoon twin, wearing a burgundy scarf and holding a borrowed spoon">
+            <span class="ticket">PERSON OF INTEREST<br><strong>KIP RUMMAGE</strong><br>Wanted for questioning. And crumbs.</span>
+          </div>
         </div>
-        <p class="lobby-copy">
-          Eight tiny games. Each one is secretly a different JavaScript event lesson wearing a loud jacket.
+        <div class="character-note"><span>THE FAMILY BUSINESS</span><p>Pip applied to the Lost &amp; Found. Kip mostly supplies the lost. Same face, different résumé.</p><strong>“I’m not stealing. I’m redistributing dessert.” — Kip</strong></div>
+        <div class="section-heading">
+          <h2>The caper board <span>06 SMALL ACTS OF MISCHIEF</span>
+          </h2>
+          <p id="completion">0 / 6 heists pulled off this visit</p>
+        </div>
+        <div class="game-grid">
+          <button class="job-card peach" data-game="0">
+            <span class="card-top">01 / THE SILVER DRAWER <span>↗</span>
+            </span>
+            <span class="illustration">🥄</span>
+            <h3>Sticky fingers</h3>
+            <p>Lift the spoons. Leave the alarm bells.</p>
+            <span class="tags">click · event delegation</span>
+          </button>
+          <button class="job-card lilac" data-game="1">
+            <span class="card-top">02 / THE ROOFTOPS <span>↗</span>
+            </span>
+            <span class="illustration">☾</span>
+            <h3>A leap of mischief</h3>
+            <p>Three rooftops between Kip and the pantry.</p>
+            <span class="tags">keydown · keyup · pointer events</span>
+          </button>
+          <button class="job-card mint" data-game="2">
+            <span class="card-top">03 / THE GETAWAY BAGS <span>↗</span>
+            </span>
+            <span class="illustration">♢</span>
+            <h3>Pack the swag</h3>
+            <p>A proper picnic needs properly packed loot.</p>
+            <span class="tags">dragstart · dragover · drop</span>
+          </button>
+          <button class="job-card butter" data-game="3">
+            <span class="card-top">04 / THE BISCUIT VAULT <span>↗</span>
+            </span>
+            <span class="illustration">◎</span>
+            <h3>Crumbs & tumblers</h3>
+            <p>Turn the knob. Feel the click. Crack the safe.</p>
+            <span class="tags">pointermove · input · change</span>
+          </button>
+          <button class="job-card rose" data-game="4">
+            <span class="card-top">05 / THE SLEEPY LOOKOUT <span>↗</span>
+            </span>
+            <span class="illustration">👁</span>
+            <h3>The quiet bit</h3>
+            <p>Slip the biscuits past one very sleepy guard.</p>
+            <span class="tags">pointerenter · pointerleave · focus</span>
+          </button>
+          <button class="job-card blue" data-game="5">
+            <span class="card-top">06 / THE CALLING CARD <span>↗</span>
+            </span>
+            <span class="illustration">⌨</span>
+            <h3>Signed, definitely Pip</h3>
+            <p>Leave a cheeky note. Make a clean getaway.</p>
+            <span class="tags">submit · input · focus · blur</span>
+          </button>
+        </div>
+        <p class="footnote">SNEAK → PLAY → LEARN <span>Vanilla JavaScript. No libraries. Just listeners.</span>
         </p>
-      </div>
-
-      <div id="gameGrid" class="game-grid" aria-label="Choose a minigame"></div>
-    </section>
-
-    <section id="arena" class="arena" hidden>
-      <div class="arena-topbar">
-        <button id="backButton" class="icon-button" type="button" aria-label="Return to game menu">Back</button>
-        <div>
-          <p id="gameLesson" class="kicker"></p>
-          <h2 id="gameTitle"></h2>
+      </section>
+      <section id="arena" hidden>
+        <nav class="arena-nav">
+          <button id="back">← Caper board</button>
+          <span id="jobNumber">
+          </span>
+          <button id="restart">↻ Start over</button>
+        </nav>
+        <div class="arena-heading"><img class="briefing-kip" src="kip.svg" alt="Kip Rummage">
+          <p class="eyebrow">KIP’S NEXT BRIGHT IDEA</p>
+          <h1 id="gameTitle">
+          </h1>
+          <p id="instructions">
+          </p>
         </div>
-        <button id="restartButton" class="icon-button" type="button">Restart</button>
-      </div>
-
-      <div class="status-strip">
-        <p id="gamePrompt">Pick a game.</p>
-        <p id="gameScore">Ready</p>
-      </div>
-
-      <div id="gameStage" class="game-stage" aria-live="polite"></div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
+        <div class="play-layout">
+          <div class="cabinet">
+            <div class="hud">
+              <span id="score">Ready?</span>
+              <span id="timer">Practice</span>
+            </div>
+            <div id="feedback" class="feedback-bar" role="status">THE PLAN IS SIMPLE. MOSTLY.</div>
+            <div id="stage">
+            </div>
+            <div id="result" role="status">
+            </div>
+            <div class="game-actions">
+              <button id="start" class="primary">Begin heist →</button>
+              <button id="next" hidden>Next heist →</button>
+              <label>
+                <input id="timed" type="checkbox" checked> Before sunrise</label>
+            </div>
+          </div>
+          <aside class="inspector">
+            <p class="eyebrow">THE TRICKS BEHIND THE TRICKERY</p>
+            <h2>Every move leaves a trace.</h2>
+            <p id="lesson">
+            </p>
+            <p class="code-label">THE CORE IDEA</p>
+            <pre><code id="example"></code></pre>
+            <div class="live-heading">
+              <span class="live-dot">
+              </span> LIVE EVENT FEED</div>
+            <ol id="eventLog" aria-label="Recent events">
+            </ol>
+            <p class="inspector-note">The feed shows real events, including alternative controls. Frequent events are sampled to keep it readable.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <strong>KIP RUMMAGE / EST. AFTER DARK</strong>
+      <span>Pip finds things. Kip finds a way in.</span>
+      <code>document.addEventListener("DOMContentLoaded", ...)</code>
+    </footer>
+    <noscript>This arcade needs JavaScript enabled to run the games.</noscript>
+    <script src="script.js">
+    </script>
+  </body>
 </html>

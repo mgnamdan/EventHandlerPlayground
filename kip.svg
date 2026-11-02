@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <title>Kip Rummage, mischievous raccoon and midnight biscuit bandit</title>
+  
+  
+  <ellipse cx="120" cy="222" rx="83" ry="9" fill="#142c30" opacity=".25"/>
+  <path d="M163 168 Q231 135 223 189 Q217 220 169 211" fill="#919b99" stroke="#26372e" stroke-width="5"/>
+  <path d="M200 155 L211 205 M180 164 L189 213" stroke="#384644" stroke-width="13"/>
+  <path d="M67 222 L72 162 Q120 141 168 162 L178 222Z" fill="#31434b" stroke="#26372e" stroke-width="5"/>
+  <path d="M92 157 Q120 170 149 157 L145 177 Q117 188 94 174Z" fill="#a3434e" stroke="#26372e" stroke-width="4"/>
+  <path d="M140 173 L169 190 L161 207 L131 179Z" fill="#a3434e" stroke="#26372e" stroke-width="3"/>
+  <path d="M62 78 L52 33 Q80 29 96 60 M148 60 Q173 29 193 35 L181 81" fill="#919b99" stroke="#26372e" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M65 61 L63 44 L82 59 M164 59 L181 46 L179 66" fill="#e7b7a5"/>
+  <path d="M55 92 Q60 53 120 53 Q180 53 185 92 L197 118 L172 148 Q120 181 68 148 L43 118Z" fill="#aeb7b2" stroke="#26372e" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M52 105 Q76 80 110 103 L103 131 Q75 141 54 122 M188 105 Q164 80 130 103 L137 131 Q165 141 186 122" fill="#384644"/>
+  <ellipse cx="86" cy="111" rx="9" ry="12" fill="#fffdf5"/>
+  <ellipse cx="154" cy="111" rx="9" ry="12" fill="#fffdf5"/>
+  <circle cx="91" cy="112" r="5" fill="#26372e"/>
+  <circle cx="156" cy="112" r="5" fill="#26372e"/>
+  <path d="M73 94 L98 101 M140 99 L165 92" stroke="#26372e" stroke-width="5" stroke-linecap="round"/><path d="M91 138 Q120 112 149 138 Q120 173 91 138" fill="#fffdf5"/>
+  <path d="M110 130 Q120 124 130 130 L120 140Z" fill="#26372e"/>
+  <path d="M120 140 L120 146 Q131 153 138 143" fill="none" stroke="#26372e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M75 180 Q56 181 58 205 L85 205" fill="#919b99" stroke="#26372e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M164 180 Q187 182 181 200 L163 201" fill="#919b99" stroke="#26372e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M177 195 L189 149" stroke="#26372e" stroke-width="8" stroke-linecap="round"/>
+  <path d="M177 195 L189 149" stroke="#e0e6df" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="192" cy="140" rx="9" ry="15" transform="rotate(15 192 140)" fill="#e0e6df" stroke="#26372e" stroke-width="3"/>
+</svg>
